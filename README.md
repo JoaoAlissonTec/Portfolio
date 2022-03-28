@@ -6,3 +6,5 @@ Olá! Aqui é meu portfólio
   Um pouco sobre mim, minha carreira, minhas habilidades, hobbies e projetos.<br>
 <h3>Regras<br></h3>
   Se divirta e conheça um pouco sobre mim.<br>
+<br>
+<a href="https://joaoalissontec.github.io/Portfolio/" target="_blank">Clique aqui para acessar</a>
