@@ -119,11 +119,11 @@ section#infosDetalhes div#redes_sociais a{
     }
     .nav-list{
         position: absolute;
-        top: 8vh;
+        top: 12vh;
         right: 0;
         width: 58vh;
         height: 92vh;
-        background: #fff;
+        background: white;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -152,5 +152,20 @@ section#infosDetalhes div#redes_sociais a{
             opacity: 1;
             transform: translateX(0);
         }
+    }
+}
+
+@media screen and (max-width: 660px){
+    section#sobre{
+        flex-direction: column;
+    }
+    section#infos{
+        text-align: center;
+    }
+    section#infosDetalhes div#texto{
+        margin-bottom: 3%;
+    }
+    section#infosDetalhes div#texto h1{
+        margin-bottom: 2%;
     }
 }
