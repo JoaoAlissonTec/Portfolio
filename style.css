@@ -112,8 +112,8 @@ section#infosDetalhes div#redes_sociais a{
     margin-right: 15px;
 }
 
-@media screen and (max-width: 999px){
-    *{
+@media (max-width: 999px){
+    body{
         overflow-x: hidden;
     }
     .nav-list{
@@ -154,7 +154,7 @@ section#infosDetalhes div#redes_sociais a{
     }
 }
 
-@media screen and (max-width: 660px){
+@media (max-width: 660px){
     nav img{
         width: 60px;
         margin-left: 20px;
