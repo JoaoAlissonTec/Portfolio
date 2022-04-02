@@ -75,13 +75,12 @@ section#infos{
     margin-left: 5%;
     margin-right: 5%;
 }
-section#infos p{
-    margin-bottom: 15px;
-}
+
 section#infos h2{
     font-size: 28px;
 }
 section#infos p{
+    margin-bottom: 15px;
     font-size: 20px;
 }
 
@@ -114,7 +113,7 @@ section#infosDetalhes div#redes_sociais a{
 }
 
 @media screen and (max-width: 999px){
-    body{
+    *{
         overflow-x: hidden;
     }
     .nav-list{
@@ -156,16 +155,54 @@ section#infosDetalhes div#redes_sociais a{
 }
 
 @media screen and (max-width: 660px){
+    nav img{
+        width: 60px;
+        margin-left: 20px;
+    }
+    .nav-list li{
+        font-size: 15px;
+    }
+    section#bv{
+        margin-bottom: 40px;
+    }
+    section#bv h1{
+        font-size: 40px;
+        margin-bottom: 10%;
+    }
+    
+    section#bv p{
+        font-size: 15px;
+    }
     section#sobre{
         flex-direction: column;
     }
     section#infos{
         text-align: center;
     }
+    section#infos img{
+        width: 180px;
+        margin-bottom: 20px;
+    }
+    section#infos h2{
+        font-size: 24px;
+    }
+    section#infos p{
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
     section#infosDetalhes div#texto{
         margin-bottom: 3%;
     }
     section#infosDetalhes div#texto h1{
         margin-bottom: 2%;
+        font-size: 24px;
+    }
+    section#infosDetalhes div#texto p{
+        font-size: 14px;
+    }
+    section#infosDetalhes div#redes_sociais a img{
+        width: 24px;
+        margin-right: 5px;
     }
 }
