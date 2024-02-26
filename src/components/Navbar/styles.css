@@ -1,0 +1,21 @@
+.nav{
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    width: 100%;
+    color: #F1B507;
+}
+
+.items{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+@media only screen and (max-width: 600px){
+    .items{
+        display: none;
+    }
+}
