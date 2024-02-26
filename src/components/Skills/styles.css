@@ -1,0 +1,12 @@
+.skills{
+    min-height: 100vh;
+    background-color: #F1B507;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.skills h2{
+    margin-bottom: 1em;
+}
