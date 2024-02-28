@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/About';
+import FloatButton from './components/FloatButton';
 import Main from './components/Main';
 import Navbar from './components/Navbar';
 import NavItem from './components/NavItem';
@@ -7,9 +8,21 @@ import Skills from './components/Skills';
 import SkillsContainer from './components/SkillsContainer';
 import Charater1 from './img/charater1.png';
 import Charater2 from './img/charater2.png';
-import {FaHtml5, FaCss3, FaJs, FaJava, FaReact, FaLaravel, FaFigma, FaPhp} from 'react-icons/fa'
+import { useState, useEffect } from 'react';
+import {FaHtml5, FaCss3, FaJs, FaJava, FaReact, FaLaravel, FaFigma, FaPhp, FaArrowUp} from 'react-icons/fa'
 
 function App() {
+
+  const [showTopBtn, setShowTopBtn] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                setShowTopBtn(true);
+            } else {
+                setShowTopBtn(false);
+            }
+        });
+    }, []);
 
   function calculateAge(bornday) {
     var today = new Date();
@@ -34,6 +47,10 @@ function App() {
     {"name":"Java", "icon":<FaJava/>},
     {"name":"Figma", "icon":<FaFigma/>}
   ]
+
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+  }
 
   return (
     <div className="App">
@@ -62,6 +79,9 @@ function App() {
         <h2>Habilidades</h2>
         <SkillsContainer skills={skills}/>
       </Skills>
+      {
+        showTopBtn && <FloatButton icon={<FaArrowUp/>} onClick={scrollToTop}/>
+      }
     </div>
   );
 }

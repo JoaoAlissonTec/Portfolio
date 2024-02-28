@@ -1,11 +1,11 @@
 .nav{
-    background-color: #111111;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
     width: 100%;
     color: #F1B507;
+    position: absolute;
 }
 
 .items{
