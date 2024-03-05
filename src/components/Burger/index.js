@@ -16,8 +16,8 @@ export default function Burger(){
             <ul id="menu">
                 <NavItem text="Principal" href="#" onClick={handleOnChange}/>
                 <NavItem text="Sobre Mim" href="#about" onClick={handleOnChange}/>
-                <NavItem text="Habilidades" href="#" onClick={handleOnChange}/>
-                <NavItem text="Projetos" href="#" onClick={handleOnChange}/>
+                <NavItem text="Habilidades" href="#skills" onClick={handleOnChange}/>
+                <NavItem text="Projetos" href="#projects" onClick={handleOnChange}/>
             </ul>
         </div>
     )

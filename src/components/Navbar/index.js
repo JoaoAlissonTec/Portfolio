@@ -5,7 +5,7 @@ export default function Navbar({children}){
     return(
         <nav className="nav">
             <Burger/>
-            <h1>Logo</h1>
+            <h1>João Alisson</h1>
             <ul className="items">
                 {children}
             </ul>

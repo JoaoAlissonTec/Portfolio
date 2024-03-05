@@ -1,0 +1,56 @@
+.card{
+    min-width: 400px;
+    height: 200px;
+    position: relative;
+    border: 1px solid #1b1b1b;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .description{
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.3982843137254902) 0%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0;
+    color: #F1B507;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 0;
+    transition: .5s;
+    border: 1px solid #F1B507;
+}
+
+.card .description .technologies{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card .description .technologies svg{
+    font-size: 1.5em;
+}
+
+.card .description p{
+    font-size: .8em;
+    color: white;
+}
+
+.card:hover > .description{
+    opacity: 1;
+}
+
+@media only screen and (max-width: 600px){
+    .card{
+        min-width: 300px;
+        height: 150px;
+    }
+}

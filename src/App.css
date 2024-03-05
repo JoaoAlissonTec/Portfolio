@@ -15,4 +15,5 @@ html ::-webkit-scrollbar-track {
 .App{
     width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
