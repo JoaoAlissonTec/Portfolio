@@ -1,4 +1,4 @@
-import Burger from '../Burger'
+import Burger from '../../Burger'
 import './styles.css'
 
 export default function Navbar({children}){

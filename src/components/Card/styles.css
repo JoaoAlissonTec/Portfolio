@@ -3,6 +3,14 @@
     height: 200px;
     position: relative;
     border: 1px solid #1b1b1b;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .noImage{
+    color: #F1B507;
 }
 
 .card img{

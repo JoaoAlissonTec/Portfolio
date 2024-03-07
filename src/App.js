@@ -1,19 +1,19 @@
 import './App.css';
-import About from './components/About';
+import About from './components/Layout/About';
 import Card from './components/Card';
 import FloatButton from './components/FloatButton';
-import Main from './components/Main';
-import Navbar from './components/Navbar';
+import Main from './components/Layout/Main';
+import Navbar from './components/Layout/Navbar';
 import NavItem from './components/NavItem';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Projects from './components/Layout/Projects';
+import Skills from './components/Layout/Skills';
 import SkillsContainer from './components/SkillsContainer';
 import Charater1 from './img/charater1.png';
 import Charater2 from './img/charater2.png';
-import Mdvie from './img/projects/Mdvie.png';
-import ConsultaCep from './img/projects/Consulta-de-CEP.png';
+import ProjectsData from './data/projectsData';
+import SkillsData from './data/skillsData';
 import { useState, useEffect } from 'react';
-import {FaHtml5, FaCss3, FaJs, FaJava, FaReact, FaLaravel, FaFigma, FaPhp, FaArrowUp} from 'react-icons/fa'
+import {FaArrowUp} from 'react-icons/fa'
 
 function App() {
 
@@ -40,29 +40,6 @@ function App() {
 
     return yearsOld;
   }
-
-  const skills = [
-    {"name":"HTML", "icon":<FaHtml5/>},
-    {"name":"CSS", "icon":<FaCss3/>},
-    {"name":"Javascript", "icon":<FaJs/>},
-    {"name":"React", "icon":<FaReact/>},
-    {"name":"PHP", "icon":<FaPhp/>},
-    {"name":"Laravel", "icon":<FaLaravel/>},
-    {"name":"Java", "icon":<FaJava/>},
-    {"name":"Figma", "icon":<FaFigma/>}
-  ]
-
-  const projects = [
-    {"title":"Mdvie", "type":"Website", "image":Mdvie, "link":"https://mdvie.vercel.app/", "technologies":[
-      "React",
-      "Javascript"
-    ]},
-    {"title":"Consulta CEP", "type":"Website", "image":ConsultaCep, "link":"https://joaoalissontec.github.io/consulta-cep/", "technologies":[
-      "HTML",
-      "CSS",
-      "Javascript"
-    ]}
-  ]
 
   const scrollToTop = () => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
@@ -93,10 +70,10 @@ function App() {
       </About>
       <Skills>
         <h2>Habilidades</h2>
-        <SkillsContainer skills={skills}/>
+        <SkillsContainer skills={SkillsData}/>
       </Skills>
       <Projects>
-        {projects.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={skills.filter(skill=>value.technologies.includes(skill.name))}/>)}
+        {ProjectsData.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={SkillsData.filter(skill=>value.technologies.includes(skill.name))}/>)}
       </Projects>
       {
         showTopBtn && <FloatButton icon={<FaArrowUp/>} onClick={scrollToTop}/>
