@@ -16,4 +16,8 @@ html ::-webkit-scrollbar-track {
     width: 100%;
     overflow-x: hidden;
     position: relative;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

@@ -14,6 +14,9 @@ import ProjectsData from './data/projectsData';
 import SkillsData from './data/skillsData';
 import { useState, useEffect } from 'react';
 import {FaArrowUp} from 'react-icons/fa'
+import Footer from './components/Layout/Footer';
+import AboutMeData from './data/AboutMeData';
+import FooterContent from './components/FooterContent';
 
 function App() {
 
@@ -75,6 +78,19 @@ function App() {
       <Projects>
         {ProjectsData.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={SkillsData.filter(skill=>value.technologies.includes(skill.name))}/>)}
       </Projects>
+      <Footer>
+        <div>
+          <h1>Logo</h1>
+        </div>
+        <div className='links'>
+          <FooterContent title="Redes" className="social">
+            {AboutMeData.social.map((value)=><a href={value.link} target='_blank' rel='noreferrer'>{value.icon}</a>)}
+          </FooterContent>
+          <FooterContent title="Contatos">
+            {AboutMeData.contact.map((value)=><li><a href={value.link}>{value.name}</a></li>)}
+          </FooterContent>
+        </div>
+      </Footer>
       {
         showTopBtn && <FloatButton icon={<FaArrowUp/>} onClick={scrollToTop}/>
       }
