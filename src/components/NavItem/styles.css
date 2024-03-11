@@ -1,4 +1,26 @@
+.item{
+    position: relative;
+}
+
 .link{
     color: #F1B507;
     text-decoration: none;   
+}
+
+.link::before{
+    display:block;
+    content:'';
+    width:0;
+    height:2px;
+    bottom:5px;
+    left:0;
+    bottom:-3px;
+    z-index:0;
+    position:absolute;
+    background:#F1B507;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover::before{
+    width:100%;
 }

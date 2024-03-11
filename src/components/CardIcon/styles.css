@@ -24,7 +24,6 @@
 
 .cardIcon:hover{
     color: #F1B507;
-    box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.39)
 }
 
 .cardIcon:hover > svg{

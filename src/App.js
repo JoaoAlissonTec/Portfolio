@@ -71,13 +71,13 @@ function App() {
           <p>Sou João Alisson, um jovem apaixonado por tecnologia e desenvolvimento de software. Com {calculateAge('2005-07-22')} anos de idade e determinação incansável, estou mergulhado no emocionante mundo da análise e desenvolvimento de sistemas. Quero compartilhar com vocês um pouco da minha jornada e dos projetos nos quais tenho trabalhado até agora.</p>
         </article>
       </About>
+      <Projects>
+        {ProjectsData.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={SkillsData.filter(skill=>value.technologies.includes(skill.name))}/>)}
+      </Projects>
       <Skills>
         <h2>Habilidades</h2>
         <SkillsContainer skills={SkillsData}/>
       </Skills>
-      <Projects>
-        {ProjectsData.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={SkillsData.filter(skill=>value.technologies.includes(skill.name))}/>)}
-      </Projects>
       <Footer>
         <div>
           <h1>Logo</h1>
