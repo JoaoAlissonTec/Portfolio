@@ -26,3 +26,14 @@
         color: #111111;
     }
 }
+
+.footerContent .contact{
+    a svg{
+        font-size: 1.2em;
+        margin-right: .5em;
+    } 
+
+    a:hover{
+        color: #111111;
+    }
+}

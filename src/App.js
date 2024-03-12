@@ -86,8 +86,8 @@ function App() {
           <FooterContent title="Redes" className="social">
             {AboutMeData.social.map((value)=><a href={value.link} target='_blank' rel='noreferrer'>{value.icon}</a>)}
           </FooterContent>
-          <FooterContent title="Contatos">
-            {AboutMeData.contact.map((value)=><li><a href={value.link}>{value.name}</a></li>)}
+          <FooterContent title="Contatos" className="contact">
+            {AboutMeData.contact.map((value)=><li><a href={value.link}>{value.icon}{value.name}</a></li>)}
           </FooterContent>
         </div>
       </Footer>
