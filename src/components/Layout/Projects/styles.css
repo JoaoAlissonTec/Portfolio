@@ -4,6 +4,7 @@
     padding: 4em 1em;
     background-color: #111111;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -24,10 +25,6 @@
 }
 
 @media only screen and (max-width: 600px){
-    .projects{
-        flex-direction: column;
-    }
-
     .projects h2{
         writing-mode: horizontal-tb;
     }

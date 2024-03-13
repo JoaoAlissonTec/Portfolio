@@ -8,7 +8,7 @@ export default function Card({img, title, type, technologies}){
                 <h3>{title}</h3>
                 <p>{type}</p>
                 <div className='technologies'>
-                    {technologies.map((value)=>value.icon)}
+                    {technologies.map((value, index)=><div key={index}>{value.icon}</div>)}
                 </div>
             </div>
         </div>

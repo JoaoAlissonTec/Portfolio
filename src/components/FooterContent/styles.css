@@ -2,38 +2,9 @@
     display: flex;
     gap: 10px;
     flex-direction: column;
-
-    ul li, a{
-        text-decoration: none;
-        list-style: none;
-        color: #11111194;
-
-        :hover{
-            color: #111111;
-        }
-    }
 }
 
 .footerContent .social{
     display: flex;
     gap: 10px;
-
-    a svg{
-        font-size: 1.5em;
-    } 
-
-    a:hover{
-        color: #111111;
-    }
-}
-
-.footerContent .contact{
-    a svg{
-        font-size: 1.2em;
-        margin-right: .5em;
-    } 
-
-    a:hover{
-        color: #111111;
-    }
 }

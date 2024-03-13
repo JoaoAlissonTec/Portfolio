@@ -1,7 +1,10 @@
 .footer{
     display: flex;
     background-color: #F1B507;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 400px;
+    row-gap: 10px;
+    flex-wrap: wrap;
     align-items: center;
     padding: 2em 7em 2em 5em;
     width: 100%;

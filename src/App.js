@@ -1,13 +1,10 @@
 import './App.css';
 import About from './components/Layout/About';
-import Card from './components/Card';
 import FloatButton from './components/FloatButton';
 import Main from './components/Layout/Main';
 import Navbar from './components/Layout/Navbar';
-import NavItem from './components/NavItem';
 import Projects from './components/Layout/Projects';
 import Skills from './components/Layout/Skills';
-import SkillsContainer from './components/SkillsContainer';
 import Charater1 from './img/charater1.png';
 import Charater2 from './img/charater2.png';
 import ProjectsData from './data/projectsData';
@@ -16,7 +13,6 @@ import { useState, useEffect } from 'react';
 import {FaArrowUp} from 'react-icons/fa'
 import Footer from './components/Layout/Footer';
 import AboutMeData from './data/AboutMeData';
-import FooterContent from './components/FooterContent';
 
 function App() {
 
@@ -50,50 +46,13 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar>
-        <NavItem text="Principal" href="#"/>
-        <NavItem text="Sobre Mim" href="#about"/>
-        <NavItem text="Habilidades" href="#skills"/>
-        <NavItem text="Projetos" href="#projects"/>
-      </Navbar>
-      <Main>
-        <span>
-          <h2 className="marked">João Alisson</h2>
-          <h1>- Olá, visitante, seja bem-vindo</h1>
-          <h2>Desenvolvedor Fullstack comprometido com inovação e criatividade</h2>
-        </span>
-        <img src={Charater1} alt="charater 1" />
-      </Main>
-      <About>
-        <img src={Charater2} alt="charater 2"/>
-        <article>
-          <h2>Sobre Mim</h2>
-          <p>Sou João Alisson, um jovem apaixonado por tecnologia e desenvolvimento de software. Com {calculateAge('2005-07-22')} anos de idade e determinação incansável, estou mergulhado no emocionante mundo da análise e desenvolvimento de sistemas. Quero compartilhar com vocês um pouco da minha jornada e dos projetos nos quais tenho trabalhado até agora.</p>
-        </article>
-      </About>
-      <Projects>
-        {ProjectsData.map((value, index)=><Card key={index} img={value.image} title={value.title} type={value.type} link={value.link} technologies={SkillsData.filter(skill=>value.technologies.includes(skill.name))}/>)}
-      </Projects>
-      <Skills>
-        <h2>Habilidades</h2>
-        <SkillsContainer skills={SkillsData}/>
-      </Skills>
-      <Footer>
-        <div>
-          <h1>Logo</h1>
-        </div>
-        <div className='links'>
-          <FooterContent title="Redes" className="social">
-            {AboutMeData.social.map((value)=><a href={value.link} target='_blank' rel='noreferrer'>{value.icon}</a>)}
-          </FooterContent>
-          <FooterContent title="Contatos" className="contact">
-            {AboutMeData.contact.map((value)=><li><a href={value.link}>{value.icon}{value.name}</a></li>)}
-          </FooterContent>
-        </div>
-      </Footer>
-      {
-        showTopBtn && <FloatButton icon={<FaArrowUp/>} onClick={scrollToTop}/>
-      }
+      <Navbar/>
+      <Main img={Charater1}/>
+      <About img={Charater2} age={calculateAge}/>
+      <Projects project={ProjectsData} skills={SkillsData}/>
+      <Skills skills={SkillsData}/>
+      <Footer abouteMe={AboutMeData}/>
+      {showTopBtn && <FloatButton icon={<FaArrowUp/>} onClick={scrollToTop}/>}
     </div>
   );
 }
