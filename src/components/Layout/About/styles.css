@@ -16,6 +16,21 @@
     transform: scaleX(-1);
 }
 
+.about .download-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #111111;
+    color: #F1B507;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 900px){
     .about{
         height: 60vh;
